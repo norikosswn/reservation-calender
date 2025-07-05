@@ -1,0 +1,202 @@
+table.reservation-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 15px;
+  border: 2px solid #bdbdbd;
+  background: #fff;
+}
+
+.status-circle {
+  font-size: 22px;
+  font-weight: bold;
+  display: inline-block;
+  width: 1.8em;
+  height: 1.8em;
+  line-height: 1.8em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.available .status-circle {
+  color: #1976d2;
+  background: #e3f2fd;
+  border: 2px solid #1976d2;
+}
+
+.unavailable .status-circle {
+  color: #e53935;
+  background: #ffebee;
+  border: 2px solid #e53935;
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    background-color: #fff0f4;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  th, td {
+    padding: 8px 2px;
+    height: 32px;
+    word-break: keep-all;
+    text-align: center;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 16%; /* 時間列 */
+  }
+
+  th:not(:first-child),
+  td:not(:first-child) {
+    width: calc(84% / 7); /* 残り7列を均等に */
+  }
+
+  .status-circle {
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+    width: 1.8em;
+    height: 1.8em;
+    line-height: 1.8em;
+    border-radius: 50%;
+    color: #1976d2;
+    background: #f3f8ff;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+.unavailable .status-circle {
+    color: #e53935;
+    background: #fff0f0;
+  }
+
+.available .status-circle {
+    color: #1976d2;
+    background: #f3f8ff;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+@media screen and (max-width: 768px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* 横スクロール防止 */
+  }
+
+  .container {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  table {
+    width: 100vw; /* 確実に画面幅に合わせる */
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    background-color: #fff0f4;
+    overflow-x: hidden; /* 横スクロール防止 */
+  }
+
+  table {
+    width: 100vw; /* スマホ画面にぴったり */
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  th, td {
+    padding: 2px;
+    height: 24px;
+    word-break: keep-all;
+    text-align: center;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 16%; /* 時間列 */
+  }
+
+  th:not(:first-child),
+  td:not(:first-child) {
+    width: calc(84% / 7); /* 残りの曜日を均等に */
+  }
+
+  .status-circle {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    background-color: #fff0f4;
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    font-size: 13.5px;
+  }
+
+  th, td {
+    padding: 1px 1px;
+    height: 16px; /* 縦幅を圧縮（半分弱） */
+    word-break: keep-all;
+    text-align: center;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    width: 18%; /* 時間列 */
+  }
+
+  th:not(:first-child),
+  td:not(:first-child) {
+    width: calc(82% / 6); /* 残り曜日列を均等に */
+  }
+
+  /* 日付＋曜日を縦2段に表示するためのスタイル */
+  .day-header {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    font-size: 13px;
+  }
+
+  .status-circle {
+    font-size: 16px; /* ○ を大きめに表示 */
+  }
+
+  button {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
+}
+.day-header {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-size: 13px;
+}

@@ -1,0 +1,8 @@
+table.reservation-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-size: 15px;
+  border: 2px solid #bdbdbd;
+  background: #fff;
+}
